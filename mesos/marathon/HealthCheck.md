@@ -1,5 +1,6 @@
 # Marathon 에서 헬스 체크
 > ref : http://mesosphere.github.io/marathon/docs/health-checks.html#mesos-level-health-checks
+
 마라톤에 떠 있는 application은 framework 레벨에서 헬스체크를 지원한다.
 헬스 체크는 사실 두종류 인데, mesos level 헬스체크와 marathon level 헬스체크가 있다.
 디폴트는 marathon 레벨의 헬스체크인 HTTP` 다.
