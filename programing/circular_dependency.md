@@ -48,5 +48,6 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 간혹 언어의 특성을 이용해서 문제를 잠시 회피하는 방법도 있다. (C++ 에서 포인터를 사용한다거나, 모듈을 하나씩 빌드한다거나.)
 
 ## 더 읽어보면 좋을 것들
-[toby - Code Organization & Cyclic Dependency Problem](http://toby.epril.com/?p=263)
-[같은 글을 블로그에도 발행해놨다.](http://hyper-cube.io/2018/03/30/circular_dependency/)
+* [toby - Code Organization & Cyclic Dependency Problem](http://toby.epril.com/?p=263)
+* [Breaking Dependency Cycles](https://dzone.com/articles/breaking-dependency-cycles)
+* [같은 글을 블로그에도 발행해놨다.](http://hyper-cube.io/2018/03/30/circular_dependency/)
