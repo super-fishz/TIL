@@ -13,7 +13,7 @@ participant: @super_fishz, @super_fishz
 ## Goal
 * 책 하나 제대로 읽기
     * 인사이드 자바스크립트
-    * ~코뿔소 책 완독하기 (가능할까?)~
+    * 유돈노js
 * nodejs 6.x는 무엇이 추가되었나
 * nodejs 8.x는 무엇이 추가되었나
 * nodejs 10.x는 무엇이 추가되는가
