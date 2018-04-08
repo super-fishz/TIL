@@ -31,9 +31,10 @@ participant: @super_fishz, @super_fishz
     * https://www.zerocho.com/category/EcmaScript/post/58cea165ab6eaa00180c5234
 * 익숙한 라이브러리 교체 하기(버전업, 불필요한 라이브러리 안녕)
 * 기존 라이브러리 버전업
+    * 라이브러리들 버전 올리면서 예제도 찹찹
 
-* 읽을만한 링크 모음
-    * https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e
+### 읽을만한 링크 모음
+* https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e
 
 #### 스터디가 끝나고 나면
 * 자바스크립트 애매한 부분들(자바스크립트에 애매한 부분이 참 많거든요.)은 대충 다 알게된다.
