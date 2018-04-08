@@ -1,9 +1,13 @@
 # Rebuild Javascript
 ----
 tags: javascript, nodejs
+<br/>
 startAt:
+<br/>
 endAt: 
+<br/>
 frequency:
+<br/>
 participant: @super_fishz, @super_fishz
 ----
 ## Goal

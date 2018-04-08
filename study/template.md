@@ -1,9 +1,13 @@
 # 제목
 ----
 tags: string, string
+<br/>
 startAt:
+<br/>
 endAt: 
+<br/>
 frequency:
+<br/>
 participant: @super_fishz, @super_fishz
 ----
 ## Goal
