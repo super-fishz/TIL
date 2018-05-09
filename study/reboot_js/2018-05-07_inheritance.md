@@ -1,28 +1,26 @@
 ---
 layout: post
-title: 자바스크립트 스터디 19일차 - inheritance
+title: 자바스크립트 스터디 20일차 - 표준 내장 객체의 확장
 author: jh
 tags: [study, javascript]
 ---
-# 상속
-js 에서 상속을 사용하려면 prototype을 사용해서 구현하면 된다.
+# 표준 내장 객체의 확장
+## 표준 내장 객체
+* Object
+* Function
+* Array
+* String
+* Boolean
+* Number
+* Math
+* Date
+* RegExp
 {% highlight js %}
-function Ultra(){}
-Ultra.prototype.ultraProp = true;
-
-function Super(){}
-Super.prototype = new Ultra();
-
-function Sub(){}
-Sub.prototype = new Super();
-
-var o = new Sub();
-console.log(o.ultraProp);
+Array.prototype.rand = function(){
+    var index = Math.floor(this.length*Math.random());
+    return this[index];
+}
+var arr = new Array('seoul','new york','ladarkh','pusan', 'Tsukuba');
+console.log(arr.rand());
 {% endhighlight %}
-
-객체 o에서 ultraProp를 찾는다.
-없다면 Sub.prototype.ultraProp를 찾는다.
-없다면 Super.prototype.ultraProp를 찾는다.
-없다면 Ultra.prototype.ultraProp를 찾는다.
-
-new 가 없으면 부모의 prototype 이 그대로 가져와지기 때문에 new 는 꼭 필요함
+이런식으로 Array를 확장할 수 있음.
