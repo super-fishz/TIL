@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바스크립트 스터디 17일차 - 생성자와 new
+title: 자바스크립트 스터디 18일차 - 생성자와 new
 author: jh
 tags: [study, javascript]
 ---

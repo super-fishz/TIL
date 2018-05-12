@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바스크립트 스터디 19일차 - inheritance
+title: 자바스크립트 스터디 21일차 - inheritance
 author: jh
 tags: [study, javascript]
 ---

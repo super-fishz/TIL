@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자바스크립트 스터디 18일차 - 전역객체
+title: 자바스크립트 스터디 19일차 - 전역객체
 author: jh
 tags: [study, javascript]
 ---
