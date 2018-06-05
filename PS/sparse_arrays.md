@@ -6,8 +6,8 @@ return the collection of integers that is consist of occurrences of each query s
 ```
 
 # Solution
-string(s)에 대하여 query(q)를 각 s에 대하여 반복하므로 시간복잡도는 O(n^2),<br/>
-루프를 한번만 돌면서 빈도를 계산하면 시간복잡도는 줄어들텐데(O(s+q))<br/>
+string(S)에 대하여 query(Q)를 각 s에 대하여 반복하므로 시간복잡도는 O(SQ),<br/>
+루프를 한번만 돌면서 빈도를 계산하면 시간복잡도는 줄어들텐데(O(S+Q))<br/>
 직관적으로 한줄로 풀었음.
 ### Kotlin
 ```kotlin
