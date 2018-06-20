@@ -29,3 +29,9 @@ class TwoToOneTest {
   
 }
 ```
+
+```javascript
+function longest(s1, s2) {
+  return [...s1+s2].filter((v, i, s) => s.indexOf(v) == i).sort().join('')
+}
+```
