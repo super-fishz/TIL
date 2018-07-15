@@ -12,11 +12,13 @@ class DollarTest {
     fun `곱셈 테스트`() {
         // given
         val five = Dollar(5)
+        val product = five.time(2)
+        val product2 = five.time(3)
 
         // when
-        five.time(2)
 
         // then
-        five.amount.should.equal(10)
+        product.should.equal(10)
+        product2.should.equal(15)
     }
 }
