@@ -21,4 +21,15 @@ class DollarTest {
         product.should.equal(10)
         product2.should.equal(15)
     }
+
+    @Test
+    fun `동등 테스트`() {
+        // given
+        val budget = 5
+
+        // when
+
+        // then
+        assertTrue(Dollar(budget) == Dollar(budget))
+    }
 }
