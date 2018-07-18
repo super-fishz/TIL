@@ -5,7 +5,7 @@ import net.oddpoet.expect.should
 import org.junit.Assert.*
 import org.junit.Test
 
-class DollarTest {
+class FrancTest {
 
     @Test
     fun `곱셈 테스트`() {
