@@ -1,6 +1,6 @@
 package com.stonehead.tdd
 
-class Dollar(var amount: Int) {
+class Dollar(private var amount: Int) {
 
     fun time(multiplier: Int): Dollar = Dollar(multiplier * amount)
 
