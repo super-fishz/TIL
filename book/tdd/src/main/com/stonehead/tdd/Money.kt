@@ -1,16 +1,19 @@
 package com.stonehead.tdd
 
-abstract class Money(protected val amount: Int) {
-
-    lateinit var currency: String
-    // protected val currency: String
+open class Money(protected val amount: Int, protected val currency: String) {
 
     override fun equals(other: Any?): Boolean {
-        return amount == (other as Money).amount
+        val money = (other as Money)
+        return amount == money.amount
+            && currency() == money.currency()
     }
 
 
+    fun time(multiplier: Int): Money = Money(multiplier * amount, currency)
+
     fun currency(): String = this.currency
+
+    override fun toString(): String = "$amount $currency"
 
     companion object {
         fun dollar(amount: Int) : Dollar {
