@@ -10,25 +10,25 @@ class MoneyTest {
     @Test
     fun `곱셈 테스트 - Dollar`() {
         // given
-        val five = Dollar(5)
+        val five = Money.dollar(5)
 
         // when
 
         // then
-        five.time(2).should.equal(Dollar(10))
-        five.time(3).should.equal(Dollar(15))
+        five.time(2).should.equal(Money.dollar(10))
+        five.time(3).should.equal(Money.dollar(15))
     }
 
     @Test
     fun `곱셈 테스트 - Franc`() {
         // given
-        val five = Franc(5)
+        val five = Money.franc(5)
 
         // when
 
         // then
-        five.time(2).should.equal(Franc(10))
-        five.time(3).should.equal(Franc(15))
+        five.time(2).should.equal(Money.franc(10))
+        five.time(3).should.equal(Money.franc(15))
     }
 
     @Test
@@ -39,7 +39,14 @@ class MoneyTest {
         // when
 
         // then
-        assertTrue(Dollar(budget) == Dollar(budget))
-        assertTrue(Franc(budget) == Franc(budget))
+        assertTrue(Money.dollar(budget).equals(Money.dollar(budget)))
+        assertTrue(Money.franc(budget).equals(Money.franc(budget)))
+        assertTrue(Money.franc(budget).equals(Money.dollar(budget)))
+    }
+
+    @Test
+    fun `통화 테스트`() {
+        assertEquals("USD", Money.dollar(1).currency())
+        assertEquals("CHF", Money.franc(1).currency())
     }
 }
