@@ -16,11 +16,11 @@ open class Money(protected val amount: Int, protected val currency: String) {
     override fun toString(): String = "$amount $currency"
 
     companion object {
-        fun dollar(amount: Int) : Dollar {
-            return Dollar(amount, "USD")
+        fun dollar(amount: Int) : Money {
+            return Money(amount, "USD")
         }
-        fun franc(amount: Int) : Franc {
-            return Franc(amount, "CHF")
+        fun franc(amount: Int) : Money {
+            return Money(amount, "CHF")
         }
     }
 }

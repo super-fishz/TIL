@@ -40,7 +40,6 @@ class MoneyTest {
 
         // then
         assertTrue(Money.dollar(budget) == Money.dollar(budget))
-        assertTrue(Money.franc(budget) == Money.franc(budget))
         assertFalse(Money.franc(budget) == Money.franc(budget + 1))
         assertFalse(Money.franc(budget).equals(Money.dollar(budget)))
     }
