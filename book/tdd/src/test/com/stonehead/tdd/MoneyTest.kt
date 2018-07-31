@@ -61,4 +61,15 @@ class MoneyTest {
         // then
         assertTrue(Money(budget, "CHF").equals(Franc(budget, "CHF")))
     }
+
+    @Test
+    fun `쉬운 더하기`() {
+        // given
+        val sum = Money.dollar(5).plus(Money.dollar(5))
+
+        // when
+
+        // then
+        assertEquals(Money.dollar(10), sum)
+    }
 }
