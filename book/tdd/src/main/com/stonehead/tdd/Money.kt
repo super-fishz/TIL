@@ -1,6 +1,6 @@
 package com.stonehead.tdd
 
-open class Money(protected val amount: Int, protected val currency: String): Expression {
+open class Money(val amount: Int, val currency: String): Expression {
 
     override fun equals(other: Any?): Boolean {
         val money = (other as Money)
@@ -16,7 +16,7 @@ open class Money(protected val amount: Int, protected val currency: String): Exp
     override fun toString(): String = "$amount $currency"
 
     fun plus(addend: Money): Expression {
-        return Money(amount + addend.amount, currency)
+        return Sum(this, addend)
     }
 
     companion object {

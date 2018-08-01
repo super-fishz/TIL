@@ -75,4 +75,31 @@ class MoneyTest {
         // then
         assertEquals(Money.dollar(10), sum)
     }
+
+    @Test
+    fun `plus는 sum을 리턴한다`() {
+        // given
+        val five = Money.dollar(5)
+
+        // when
+        val result = five.plus(five)
+        val sum:Sum = result as Sum
+
+        // then
+        assertEquals(five, sum.augend)
+        assertEquals(five, sum.addend)
+    }
+
+    @Test
+    fun testReduceSum() {
+        // given
+        val sum = Sum(Money.dollar(3), Money.dollar(4))
+        val bank = Bank()
+
+        // when
+        val result = bank.reduce(sum, "USD")
+
+        // then
+        assertEquals(Money.dollar(7), result)
+    }
 }
