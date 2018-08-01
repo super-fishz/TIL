@@ -65,9 +65,12 @@ class MoneyTest {
     @Test
     fun `쉬운 더하기`() {
         // given
-        val sum = Money.dollar(5).plus(Money.dollar(5))
+        val five = Money.dollar(5)
 
         // when
+        val sum:Expression = five.plus(five)
+        val bank = Bank()
+        val reduced = bank.reduce(sum, "USD")
 
         // then
         assertEquals(Money.dollar(10), sum)
