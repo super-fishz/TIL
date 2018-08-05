@@ -11,6 +11,8 @@ open class Money(val amount: Int, val currency: String): Expression {
 
     fun time(multiplier: Int): Money = Money(multiplier * amount, currency)
 
+    fun reduce(to: String): Money = this
+
     fun currency(): String = this.currency
 
     override fun toString(): String = "$amount $currency"
