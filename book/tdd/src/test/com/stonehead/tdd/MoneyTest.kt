@@ -114,4 +114,17 @@ class MoneyTest {
         // then
         assertEquals(result, Money.dollar(1))
     }
+
+    @Test
+    fun `다른 통화 비교`() {
+        // given
+        val bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+
+        // when
+        val result = bank.reduce(Money.franc(2), "USD")
+
+        // then
+        assertEquals(Money.dollar(1), result)
+    }
 }
