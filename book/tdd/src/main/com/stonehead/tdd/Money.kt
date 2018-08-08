@@ -11,7 +11,12 @@ open class Money(val amount: Int, val currency: String): Expression {
 
     fun time(multiplier: Int): Money = Money(multiplier * amount, currency)
 
-    override fun reduce(to: String): Money = this
+    override fun reduce(to: String): Money {
+        val rate = if (currency == "CHF" && to == "USD") 2 else 1
+
+
+        return Money(amount / rate, to)
+    }
 
     fun currency(): String = this.currency
 
