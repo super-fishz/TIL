@@ -59,7 +59,7 @@ class MoneyTest {
         // when
 
         // then
-        assertTrue(Money(budget, "CHF").equals(Franc(budget, "CHF")))
+        assertTrue(Money(budget, "CHF").equals(Money.franc(budget)))
     }
 
     @Test
