@@ -73,7 +73,7 @@ class MoneyTest {
         val reduced = bank.reduce(sum, "USD")
 
         // then
-        assertEquals(Money.dollar(10), sum)
+        assertEquals(Money.dollar(10), reduced)
     }
 
     @Test
@@ -126,5 +126,15 @@ class MoneyTest {
 
         // then
         assertEquals(Money.dollar(1), result)
+    }
+
+    @Test
+    fun testIdentityRate() {
+        // given
+
+        // when
+
+        // then
+        assertEquals(1, Bank().rate("USD", "USD"))
     }
 }

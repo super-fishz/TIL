@@ -3,7 +3,7 @@ package com.stonehead.tdd
 import java.util.*
 
 class Bank {
-    private val rates = Hashtable<Pair, Int>()
+    private val rates = mutableMapOf<Pair, Int>()
 
     fun reduce(source: Expression, to: String): Money = source.reduce(this, to)
     fun addRate(from: String, to: String, rate: Int) {
@@ -11,6 +11,10 @@ class Bank {
     }
 
     fun rate(from: String, to: String): Int {
-        return rates.get(Pair(from, to))!!
+        return if (from == to) {
+            1
+        } else {
+            rates.get(Pair(from, to))!!
+        }
     }
 }
