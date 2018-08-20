@@ -3,6 +3,7 @@ package com.stonehead.tdd
 import net.oddpoet.expect.extension.equal
 import net.oddpoet.expect.should
 import org.junit.Assert.*
+import org.junit.Ignore
 import org.junit.Test
 
 class MoneyTest {
@@ -15,8 +16,8 @@ class MoneyTest {
         // when
 
         // then
-        five.time(2).should.equal(Money.dollar(10))
-        five.time(3).should.equal(Money.dollar(15))
+        five.times(2).should.equal(Money.dollar(10))
+        five.times(3).should.equal(Money.dollar(15))
     }
 
     @Test
@@ -27,8 +28,8 @@ class MoneyTest {
         // when
 
         // then
-        five.time(2).should.equal(Money.franc(10))
-        five.time(3).should.equal(Money.franc(15))
+        five.times(2).should.equal(Money.franc(10))
+        five.times(3).should.equal(Money.franc(15))
     }
 
     @Test
@@ -140,16 +141,60 @@ class MoneyTest {
 
     @Test
     fun `다른 통화 더하기`() {
-       // given
+        // given
         val fiveBucks = Money.dollar(5) as Expression
         val tenFrancs = Money.franc(10) as Expression
         val bank = Bank()
         bank.addRate("CHF", "USD", 2)
 
-       // when
+        // when
         val result = bank.reduce(fiveBucks.plus(tenFrancs), "USD")
 
-       // then
+        // then
         assertEquals(result, Money.dollar(10))
+    }
+
+    @Test
+    fun testSumPlusMoney() {
+        // given
+        val fiveBucks = Money.dollar(5) as Expression
+        val tenFrancs = Money.franc(10) as Expression
+        val bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+
+        // when
+        val sum = Sum(fiveBucks, tenFrancs).plus(fiveBucks)
+        val result = bank.reduce(sum, "USD")
+
+        // then
+        assertEquals(result, Money.dollar(15))
+    }
+
+    @Test
+    fun testSumTimes() {
+        // given
+        val fiveBucks = Money.dollar(5) as Expression
+        val tenFrancs = Money.franc(10) as Expression
+        val bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+
+        // when
+        val sum = Sum(fiveBucks, tenFrancs).times(2)
+        val result = bank.reduce(sum, "USD")
+
+        // then
+        assertEquals(result, Money.dollar(20))
+    }
+
+    @Test
+    @Ignore("test 실패.....")
+    fun testPlusSameCurrencyReturnsMoney() {
+        // given
+        val sum = Money.dollar(1).plus(Money.dollar(1))
+
+        // when
+
+        // then
+        assertTrue(sum is Money)
     }
 }

@@ -9,7 +9,7 @@ open class Money(val amount: Int, val currency: String): Expression {
     }
 
 
-    fun time(multiplier: Int): Expression = Money(multiplier * amount, currency)
+    override fun times(multiplier: Int): Expression = Money(multiplier * amount, currency)
 
     override fun reduce(bank: Bank, to: String): Money {
         val rate = bank.rate(currency, to)
