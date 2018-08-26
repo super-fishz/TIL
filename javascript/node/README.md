@@ -58,6 +58,8 @@ server.listen(port, hostname, () => {
 * https://www.npmjs.com/
 * https://www.npmtrends.com/
 
+## Debugging
+[node debugging guide](https://nodejs.org/ko/docs/guides/debugging-getting-started/)
 
 ## named modules
 * webserver
