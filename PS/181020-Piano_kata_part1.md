@@ -1,4 +1,4 @@
-# [Piano Kata Part 1]¥https://www.codewars.com/kata/589273272fab865136000108)
+# [Piano Kata Part 1](https://www.codewars.com/kata/589273272fab865136000108)
 
 ## Problem
 ```
