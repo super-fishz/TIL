@@ -1,8 +1,9 @@
-# [Climbing the Leaderboard]
+# [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
 
 ## Problem
+두개의 배열을 가지고 효율적으로 삽입하는 
 
-## Solve
+## Solve 1
 ```kotlin
 import java.io.*
 import java.math.*
@@ -33,7 +34,8 @@ data class Game(var scores: MutableList<Int>) {
         // println(newRankIdx)
         
         this.scores.add(newRankIdx + 1, score)
-        this.history.add(if (newRankIdx <= 0) 1 else newRankIdx)
+        // this.history.add(if (newRankIdx <= 0) 1 else newRankIdx)
+        this.history.add(this.scores.distinct().indexOf(score) + 1)
     }
     
     private fun findScoreIndex(score: Int): Int {
@@ -42,8 +44,8 @@ data class Game(var scores: MutableList<Int>) {
 }
     
 fun climbingLeaderboard(scores: Array<Int>, alice: Array<Int>): Array<Int> {
-    // scores 는 sorted array 이다
-    // alice 는 sort 되어있는 값은 아님
+    // scores 는 sorted array(desc)
+    // alice 는 sorted arrat(asc)
     
     val game = Game(scores.toMutableList())
     for (score in alice) {
@@ -72,4 +74,4 @@ fun main(args: Array<String>) {
 }
 
 ```
-롸?
+시간초과로 test 6-9 가 통과하지 못함
