@@ -23,7 +23,7 @@ import kotlin.text.*
 
 // Complete the repeatedString function below.
 fun repeatedString(s: String, n: Long): Long {
-    val char = s.get(0)
+    val char = 'a'
     val charCount = s.count{it == char}
     val size = s.length
     val repeat = n/size
@@ -44,13 +44,4 @@ fun main(args: Array<String>) {
     println(result)
 }
 ```
-음, 몇가지 테스트가 실패한다..
-
-실패한 테스트
-```
-(input)
-ceebbcb
-817723
-(expected output)
-0
-```
+~하하 문제를 잘못이해했다.~
