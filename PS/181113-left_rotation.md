@@ -1,5 +1,6 @@
-# [Left Rotation]()
+# [Left Rotation](https://www.hackerrank.com/challenges/array-left-rotation/problem)
 ## Problem
+array 를 좌측으로 한칸씩 움직이는 문제.
 ## Solve
 ```kotlin
 import java.io.*
