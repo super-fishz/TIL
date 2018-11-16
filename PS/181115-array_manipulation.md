@@ -22,14 +22,20 @@ import kotlin.sequences.*
 import kotlin.text.*
 
 fun arrayManipulation(n: Int, queries: Array<Array<Int>>): Long {
-    val arr = mutableListOf<Long>()
-    repeat(n) { arr.add(0L) }
-    queries.forEach { q ->
-        for (i in (q[0]-1)..(q[1]-1)) {
-            arr[i] += q[2].toLong()
-        }
+    val arr = Array(n + 1) { 0L }
+    var max = 0L
+    var sum = 0L
+
+    queries.forEach { query ->
+        arr[query[0] - 1] += query[2].toLong()
+        arr[query[1]] -= query[2].toLong()
     }
-    return arr.max()!!
+    for (i in 0 until arr.size) {
+        sum += arr[i]
+        max = kotlin.math.max(sum, max)
+    }
+    
+    return max
 }
 
 fun main(args: Array<String>) {
@@ -52,4 +58,4 @@ fun main(args: Array<String>) {
     println(result)
 }
 ```
-또 타임아웃.... 음....
+for loop 을 줄이는게 핵심이었당...
