@@ -24,7 +24,8 @@ import kotlin.text.*
 fun maximizingXor(l: Int, r: Int): Int {
     return IntRange(l,r).fold(0) {old, it ->
         IntRange(it, r).fold(old) { _old, _it ->
-            if (_old < it xor _it) it xor _it else _old
+            val xorResult = it xor _it
+            if (_old < xorResult) xorResult else _old
         }
     }
 }
