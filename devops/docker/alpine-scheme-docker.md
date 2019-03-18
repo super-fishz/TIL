@@ -13,6 +13,6 @@ alpine-scheme 을 docker 이미지로 가져와서 실행한다.
 alpine-scheme 을 베이스로 vim 과 기본 설정을 조금 넣어놓자
 
 ## 용어들
-[alpine linux](https://alpinelinux.org/)
-[docker](https://www.docker.com/)
-[scheme](https://www.gnu.org/software/mit-scheme/)
+* [alpine linux](https://alpinelinux.org/)
+* [docker](https://www.docker.com/)
+* [scheme](https://www.gnu.org/software/mit-scheme/)
