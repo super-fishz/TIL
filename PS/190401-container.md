@@ -1,4 +1,4 @@
-# [그리디 - 배]()
+# [그리디 - 배](https://www.acmicpc.net/problem/1092)
 ## Problem
 ## Solve
 ```kotlin
