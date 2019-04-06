@@ -1,4 +1,4 @@
-# [Trim BST]()
+# [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/)
 ## Problem
 ## Solve
 ```kotlin
