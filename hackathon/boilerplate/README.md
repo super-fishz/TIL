@@ -38,6 +38,7 @@
   * [Node Express Mongoose](https://github.com/madhums/node-express-mongoose)
   * [Vue, Express, MongoDB full-stack JS Boilerplate](https://github.com/icebob/vue-express-mongo-boilerplate)
   * [Node API boilerplate](https://github.com/talyssonoc/node-api-boilerplate)
+  * [보일러 플레이트 모음](http://www.boilrplate.com/language/nodejs)
   
 입맛에 쏙드는 얘는 없다.
 개조 ㄲ
