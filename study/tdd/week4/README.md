@@ -1,4 +1,4 @@
-# 1~2장 읽고 토론모임
+# [TDD 실천법과 도구 - 1~2장 읽고 토론모임](https://repo.yona.io/doortts/blog/issue/1)
 
 ## 잘한거
 * 책 읽고 온 아저씨들이 많았다.
