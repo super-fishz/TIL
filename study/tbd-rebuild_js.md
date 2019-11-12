@@ -42,7 +42,7 @@ participant: @super_fishz, @super_fishz
 * 간단한 rest api 정도는 만들 수 있다.
 
 
-## 진행 계획 [WIP]
+## 진행 계획 [done, tbd]
 1. 주제주제, yyyy-mm-dd
     * 담당: @super_fishz
 1. 주제주제, yyyy-mm-dd
